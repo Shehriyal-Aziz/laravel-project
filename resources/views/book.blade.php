@@ -14,40 +14,44 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form_container">
-            <form action="">
+            <form method="post" action="/booked">
+              @csrf
               <div>
-                <input type="text" class="form-control" placeholder="Your Name" />
+                <input type="text" name="name" class="form-control" placeholder="Your Name" />
               </div>
               <div>
-                <input type="text" class="form-control" placeholder="Phone Number" />
+                <input type="text" name="num" class="form-control" placeholder="Phone Number" />
               </div>
               <div>
-                <input type="email" class="form-control" placeholder="Your Email" />
+                <input type="email" name="email" class="form-control" placeholder="Your Email" />
               </div>
               <div>
-                <select class="form-control nice-select wide">
+                <select name="persons" class="form-control nice-select wide">
                   <option value="" disabled selected>
                     How many persons?
                   </option>
-                  <option value="">
+                  <option value="2">
                     2
                   </option>
-                  <option value="">
+                  <option value="3">
                     3
                   </option>
-                  <option value="">
+                  <option value="4">
                     4
                   </option>
-                  <option value="">
+                  <option value="5">
                     5
+                  </option>
+                  <option value="more than 5">
+                    More than 5
                   </option>
                 </select>
               </div>
               <div>
-                <input type="date" class="form-control">
+                <input type="date" name="date" class="form-control">
               </div>
               <div class="btn_box">
-                <button>
+                <button type="submit" >
                   Book Now
                 </button>
               </div>
