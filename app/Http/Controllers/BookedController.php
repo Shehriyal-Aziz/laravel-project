@@ -39,7 +39,7 @@ class BookedController extends Controller
 
     public function destroy($id)
     {
-        Booking::destroy($id);   // deletes by id
+        Booking::destroy($id);   
         return redirect()->back();
     }
 }
