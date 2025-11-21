@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookedController;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('index');
@@ -12,9 +13,7 @@ Route::get('/about', function () {
 Route::get('/book', function () {
     return view('book');
 });
-Route::get('/menu', function () {
-    return view('menu');
-});
+
 Route::get('/login', function () {
     return view('login');
 });
@@ -50,3 +49,15 @@ Route::get('/booked', [BookedController::class, 'records']);
 
 Route::delete('/remove/{id}', [BookedController::class, 'destroy']);
 
+// for update
+
+// // Show edit data (used in Ajax GET)
+// Route::get('/admin/product/{id}/edit', [ProductController::class, 'edit']);
+
+// // Update product (POST or PUT)
+// Route::post('/admin/product/{id}/update', [ProductController::class, 'update']);
+
+
+
+Route::get('/menu', [ProductController::class, 'menuProductPage']);
+Route::get('/menu_product', [ProductController::class, 'menuProductAdd']);

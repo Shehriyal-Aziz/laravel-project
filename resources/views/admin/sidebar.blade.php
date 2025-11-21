@@ -68,6 +68,20 @@
                                 <a class="nav-link" href="/order">Orders</a>
                             </nav>
                         </div>
+                            <!-- 2nd -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseComponents" aria-expanded="false" aria-controls="collapseComponents">
+
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            Components
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+
+                        <div class="collapse" id="collapseComponents" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="/menu_product">Menu products</a>
+                            </nav>
+                        </div>
 
                     </div>
                 </div>
