@@ -51,13 +51,14 @@ Route::delete('/remove/{id}', [BookedController::class, 'destroy']);
 
 // for update
 
-// // Show edit data (used in Ajax GET)
-// Route::get('/admin/product/{id}/edit', [ProductController::class, 'edit']);
 
-// // Update product (POST or PUT)
-// Route::post('/admin/product/{id}/update', [ProductController::class, 'update']);
 
 
 
 Route::get('/menu', [ProductController::class, 'menuProductPage']);
+
 Route::get('/menu_product', [ProductController::class, 'menuProductAdd']);
+
+
+Route::post('/product_data_add', [ProductController::class, 'AddRecord']);
+Route::delete('/removeFromProduct/{id}', [ProductController::class, 'destroy']);
