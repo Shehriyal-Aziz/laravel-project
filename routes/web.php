@@ -52,6 +52,7 @@ Route::delete('/remove/{id}', [BookedController::class, 'destroy']);
 // for update
 // this route take your data of product to new page 
 Route::post('/edit/{id}', [ProductController::class, 'edit']);
+Route::post('/product_save/{id}', [ProductController::class, 'update']);
 
 
 

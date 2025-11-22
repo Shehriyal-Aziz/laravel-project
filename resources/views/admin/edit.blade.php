@@ -16,9 +16,9 @@
             
             <!-- Card Body -->
             <div class="p-6">
-                <form action="/product_update/{{ $product->id }}" method="POST" enctype="multipart/form-data">
+                <form action="/product_save/{{$product->id}}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    @method('PUT')
+                    
 
                     <!-- Product Image -->
                     <div class="mb-4">

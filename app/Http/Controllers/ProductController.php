@@ -79,7 +79,7 @@ class ProductController extends Controller
 
         $product->save();
 
-        return redirect('/menu_product')->with('success', 'Product Updated');
+        return redirect('/menu_product');
     }
     // func 6
    public function edit($id)
@@ -87,5 +87,6 @@ class ProductController extends Controller
     $product = Product::findOrFail($id); // fetch single product
     return view('admin.edit', compact('product')); // pass single product
 }
+// func 7
 
 }
