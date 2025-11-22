@@ -38,15 +38,15 @@
                         <td>{{ $p->category }}</td>
                         <td><img src="{{ asset('uploads/' . $p->image) }}" height="60"></td>
                         <td>
-                            <form action="/editFromProduct/{{ $p->id }}" method="POST" class="w-100">
+                            <form action="/edit/{{ $p->id }}" method="POST" class="w-100">
                                 @csrf
-                            
-                                <button class="btn btn-sm btn-primary w-100">Edit</button>
+                                <button type="submit" class="btn btn-sm btn-primary w-100">Edit</button>
                             </form>
+                            
                             <form action="/removeFromProduct/{{ $p->id }}" method="POST" class="w-100">
                                 @csrf
                                 @method('DELETE')
-                                <button class="btn btn-sm btn-danger w-100">Remove</button>
+                                <button type="submit" class="btn btn-sm btn-danger w-100">Remove</button>
                             </form>
 
 
@@ -61,7 +61,7 @@
 </div>
 
 
-<!-- Modal -->
+<!-- Modal for adding  -->
 
 <div id="productModal" class="modal fade" tabindex="-1">
     <div class="  modal-dialog modal-dialog-centered modal-lg">
